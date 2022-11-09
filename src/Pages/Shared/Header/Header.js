@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../Assets/logo.png'
+import {FaArrowRight, FaBeer, FaUser} from 'react-icons/fa';
 
 const Header = () => {
     return (
@@ -13,9 +14,9 @@ const Header = () => {
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             <li><Link to='/home'>Home</Link></li>
-                            <li><Link>Item 1</Link></li>
-                            <li><Link>Item 1</Link></li>
-                            <li><Link>Item 1</Link></li>
+                            <li><Link>Add services</Link></li>
+                            <li><Link>My reviews</Link></li>
+                            <li><Link>Q&A</Link></li>
                             <li><Link to='/blog'>Blog</Link></li>
 
 
@@ -26,16 +27,18 @@ const Header = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">
                         <li><Link to='/home'>Home</Link></li>
-                        <li><Link>Item 1</Link></li>
-                        <li><Link>Item 1</Link></li>
-                        <li><Link>Item 1</Link></li>
+                        <li><Link>Add services</Link></li>
+                        <li><Link>My reviews</Link></li>
+                        <li><Link>Q&A</Link></li>
                         <li><Link to='/blog'>Blog</Link></li>
 
 
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link className="btn">Get started</Link>
+                    {/* <p className='mr-7'>Name: <FaUser className='inline-block'></FaUser></p> */}
+                    <Link to='/login' className="mr-7">Login <FaUser className='inline-block'></FaUser> </Link>
+                    <Link className="">Logout <FaArrowRight className='inline-block'></FaArrowRight> </Link>
                 </div>
             </div>
         </div>
