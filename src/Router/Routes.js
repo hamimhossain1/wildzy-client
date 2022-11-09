@@ -4,6 +4,9 @@ import Blog from "../Pages/Blog/Blog";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
+import QandA from "../Pages/Q&A/QandA";
+
+
 import SignUp from "../Pages/SignUp/SignUp";
 
 
@@ -29,6 +32,10 @@ const router = createBrowserRouter([
             {
                 path:'/login',
                 element: <Login></Login>
+            },
+            {
+                path:'/a&a',
+                element: <QandA></QandA>
             },
         ]
     },

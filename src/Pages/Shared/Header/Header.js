@@ -5,8 +5,8 @@ import {FaArrowRight, FaBeer, FaUser} from 'react-icons/fa';
 
 const Header = () => {
     return (
-        <div className='bg-blue-300'>
-            <div className="navbar w-11/12 p-5 mx-auto ">
+        <div className='bg-blue-300 fixed z-20 w-full top-0 left-0'>
+            <div className="navbar w-11/12 p-5 mx-auto">
                 <div className="navbar-start ">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -16,20 +16,20 @@ const Header = () => {
                             <li><Link to='/home'>Home</Link></li>
                             <li><Link>Add services</Link></li>
                             <li><Link>My reviews</Link></li>
-                            <li><Link>Q&A</Link></li>
+                            <li><Link to='/q&a'>Q&A</Link></li>
                             <li><Link to='/blog'>Blog</Link></li>
 
 
                         </ul>
                     </div>
-                    <Link className="btn btn-ghost normal-case text-xl"><img src={logo} className='w-48' alt="navbar logo" /></Link>
+                    <Link to='/home' className="btn btn-ghost normal-case text-xl"><img src={logo} className='w-48' alt="navbar logo" /></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">
                         <li><Link to='/home'>Home</Link></li>
                         <li><Link>Add services</Link></li>
                         <li><Link>My reviews</Link></li>
-                        <li><Link>Q&A</Link></li>
+                        <li><Link to='/q&a'>Q&A</Link></li>
                         <li><Link to='/blog'>Blog</Link></li>
 
 
