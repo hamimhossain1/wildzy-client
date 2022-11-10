@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 const SignUp = () => {
     return (
-        <div className='mt-12 mb-12'>
-            <div className="card w-5/12 bg-green-200 shadow-xl p-5 mx-auto">
+        <div className='mt-36 mb-12'>
+            <div className="card w-10/12 lg:w-5/12 bg-green-200 shadow-xl p-5 mx-auto">
                 <h3 className='text-3xl font-bold text-center mb-4'>SignUp</h3>
 
                 <form>

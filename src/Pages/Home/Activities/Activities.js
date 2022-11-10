@@ -1,6 +1,6 @@
 import React from 'react';
 import activitiesImg2 from '../../../Assets/activitiesImg/activities-img2.jpg'
-import { FaFacebook, FaCanadianMapleLeaf } from 'react-icons/fa';
+import {  FaCanadianMapleLeaf,  FaViadeo, FaVideo } from 'react-icons/fa';
 
 const Activities = () => {
     return (
@@ -36,18 +36,39 @@ const Activities = () => {
 
                 {/*--- activities image--- */}
                 <div className=" w-3/12  ">
+                    <div className=' h-full'>
+
                     <figure><img src={activitiesImg2} alt="Shoes" /></figure>
+                    </div>
 
                 </div>
 
                 {/*--- activities presentation--- */}
                 <div className=" w-3/12 ">
+                    <div className='flex mb-3'>
+                        <div>
+                        <button className="btn btn-outline btn-success mr-2 mt-2"><FaCanadianMapleLeaf className='text-3xl'></FaCanadianMapleLeaf></button>
+                        </div>
+                        <div className=''>
+                            <h2 className="card-title">Nature View</h2>
+                            <p>If a dog chews shoes whose shoes does he choose?If a dog chews shoes whose shoes does he choose?If a dog chews shoes whose shoes does he choose?If a dog chews shoes whose shoes does he choose?</p>
+                        </div>
+                    </div>
+                    <div className='flex mb-3'>
+                        <div>
+                        <button className="btn btn-outline btn-error mr-2 mt-2"><FaViadeo className='text-3xl'></FaViadeo></button>
+                        </div>
+                        <div className=''>
+                            <h2 className="card-title">Geo Festival</h2>
+                            <p>If a dog chews shoes whose shoes does he choose?If a dog chews shoes whose shoes does he choose?If a dog chews shoes whose shoes does he choose?If a dog chews shoes whose shoes does he choose?</p>
+                        </div>
+                    </div>
                     <div className='flex'>
                         <div>
-                        <button className="btn btn-outline btn-success"><FaCanadianMapleLeaf className='text-3xl'></FaCanadianMapleLeaf></button>
+                        <button className="btn btn-outline btn-primary mr-2 mt-2"><FaVideo className='text-3xl'></FaVideo></button>
                         </div>
-                        <div>
-                            <h2 className="card-title">Nature View</h2>
+                        <div className=''>
+                            <h2 className="card-title">Videography</h2>
                             <p>If a dog chews shoes whose shoes does he choose?If a dog chews shoes whose shoes does he choose?If a dog chews shoes whose shoes does he choose?If a dog chews shoes whose shoes does he choose?</p>
                         </div>
                     </div>
