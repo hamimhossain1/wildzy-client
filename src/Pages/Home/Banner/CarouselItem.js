@@ -9,7 +9,7 @@ const CarouselItem = ({ slide }) => {
             <div className='carousel-img'>
                 <img src={image} alt="" className="w-full h-full" />
             </div>
-            <div className="absolute flex justify-end transform -translate-y-1/2 left-14 md:left-24 left-24  top-1/4">
+            <div className="absolute flex justify-end transform -translate-y-1/2 left-14 md:left-24   top-1/4">
                 <h1 className=' text-3xl md:text-4xl md:mt-12 lg:text-6xl  font-bold text-white '>Capture <br /> Every Moment In <br /> The Wild World</h1>
             </div>
             <div className="absolute flex justify-end transform -translate-y-1/2 w-3/5 md:w-2/5 left-14 md:left-24  top-1/2">

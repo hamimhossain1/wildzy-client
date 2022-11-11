@@ -3,7 +3,7 @@ import funFactsImg from '../../../Assets/funfactsImg/achivement-img.jpg'
 
 const Achievement = () => {
     return (
-        <div className="hero mb-24 " style={{ backgroundImage: `url(${funFactsImg})` }}>
+        <div className="hero mb-12 lg:mb-24 " style={{ backgroundImage: `url(${funFactsImg})` }}>
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="py-12">
