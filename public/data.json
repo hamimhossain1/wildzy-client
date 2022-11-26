@@ -1,0 +1,38 @@
+[
+    {
+        "serviceName": "Nature",
+        "price": 99,
+        "img": "https://i.ibb.co/nDKtx6w/nature.jpg",
+        "description": "Nature photography is a wide range of photography taken outdoors and devoted to displaying natural elements such as landscapes, wildlife, plants, and close-ups of natural scenes and textures. Nature photography tends to put a stronger emphasis on the aesthetic value of the photo than other photography genres, such as photojournalism and documentary photography."
+    },
+    {
+        "serviceName": "Forest",
+        "price": 77,
+        "img": "https://i.ibb.co/D7QZdWX/forest.jpg",
+        "description": "Although the word forest is commonly used, there is no universally recognised precise definition, with more than 800 definitions of forest used around the world. Although a forest is usually defined by the presence of trees, under many definitions an area completely lacking trees may still be considered a forest if it grew trees in the past, will grow trees in the future, or was legally designated as a forest regardless of vegetation type. There are three broad categories of definitions of forest in use: administrative, land use, and land cover. Administrative definitions are based primarily upon the legal designations of land, and commonly bear little relationship to its vegetation: land that is legally designated as a forest is defined as such even if no trees are growing on it. Land-use definitions are based on the primary purpose that the land serves."
+    },
+    {
+        "serviceName": "Wildlife",
+        "price": "88",
+        "img": "https://i.ibb.co/qRHbMKL/wildlife.jpg",
+        "description": "Wildlife refers to undomesticated animal species, but has come to include all organisms that grow or live wild in an area without being introduced by humans. Wildlife was also synonymous to game: those birds and mammals that were hunted for sport. Wildlife can be found in all ecosystems. Deserts, plains, grasslands, woodlands, forests, and other areas, including the most developed urban areas, all have distinct forms of wildlife. While the term in popular culture usually refers to animals that are untouched by human factors, most scientists agree that much wildlife is affected by human activities. Some wildlife threaten human safety, health, property, and quality of life. However, many wild animals, even the dangerous ones, have value to human beings. This value might be economic, educational, or emotional in nature.Humans have historically tended to separate civilization from wildlife in a number of ways, including the legal, social, and moral senses. Some animals, however, have adapted to suburban environments. This includes such animals as feral cats, dogs, mice, and rats. Some religions declare certain animals to be sacred, and in modern times, concern for the natural environment has provoked activists to protest against the exploitation of wildlife for human benefit or entertainment."
+    },
+    {
+        "serviceName": "Animal",
+        "price": "79",
+        "img": "https://i.ibb.co/nDKtx6w/nature.jpg",
+        "description": "Animals are multicellular, eukaryotic organisms in the biological kingdom Animalia. With few exceptions, animals consume organic material, breathe oxygen, are able to move, can reproduce sexually, and go through an ontogenetic stage in which their body consists of a hollow sphere of cells, the blastula, during embryonic development. Over 1.5 million living animal species have been described—of which around 1 million are insects—but it has been estimated there are over 7 million animal species in total. Animals range in length from 8.5 micrometres (0.00033 in) to 33.6 metres (110 ft). They have complex interactions with each other and their environments, forming intricate food webs. The scientific study of animals is known as zoology. Most living animal species are in Bilateria, a clade whose members have a bilaterally symmetric body plan. The Bilateria include the protostomes, containing animals such as nematodes, arthropods, flatworms, annelids and molluscs, and the deuterostomes, containing the echinoderms and the chordates, the latter including the vertebrates. Life forms interpreted as early animals were present in the Ediacaran biota of the late Precambrian. Many modern animal phyla became clearly established in the fossil record as marine species during the Cambrian explosion, which began around 539 million years ago. 6,331 groups of genes common to all living animals have been identified; these may have arisen from a single common ancestor that lived 650 million years ago."
+    },
+    {
+        "serviceName": "Ocean",
+        "price": "55",
+        "img": "https://i.ibb.co/nDKtx6w/nature.jpg",
+        "description": "The ocean (also the sea or the world ocean) is the body of salt water that covers approximately 70.8% of the surface of Earth and contains 97% of Earth's water. An ocean can also refer to any of the large bodies of water into which the world ocean is conventionally divided. Separate names are used to identify five different areas of the ocean: Pacific (the largest), Atlantic, Indian, Southern (Antarctic), and Arctic (the smallest). Seawater covers approximately 361,000,000 km2 (139,000,000 sq mi) of the planet. The ocean is the principal component of Earth's hydrosphere, and therefore integral to life on Earth. Acting as a huge heat reservoir, the ocean influences climate and weather patterns, the carbon cycle, and the water cycle."
+    },
+    {
+        "serviceName": "Climate",
+        "price": "59",
+        "img": "https://i.ibb.co/nDKtx6w/nature.jpg",
+        "description": "Climate is the long-term weather pattern in an area, typically averaged over 30 years. More rigorously, it is the mean and variability of meteorological variables over a time spanning from months to millions of years. Some of the meteorological variables that are commonly measured are temperature, humidity, atmospheric pressure, wind, and precipitation. In a broader sense, climate is the state of the components of the climate system, including the atmosphere, hydrosphere, cryosphere, lithosphere and biosphere and the interactions between them.[1] The climate of a location is affected by its latitude/longitude, terrain, altitude, land use and nearby water bodies and their currents. Climates can be classified according to the average and typical variables, most commonly temperature and precipitation. The most widely used classification scheme was the Köppen climate classification. The Thornthwaite system, in use since 1948, incorporates evapotranspiration along with temperature and precipitation information and is used in studying biological diversity and how climate change affects it. Finally, the Bergeron and Spatial Synoptic Classification systems focus on the origin of air masses that define the climate of a region."
+    }
+]

@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../Assets/logo.png'
-import {FaArrowRight, FaBeer, FaUser} from 'react-icons/fa';
+import { FaArrowRight, FaUser } from 'react-icons/fa';
+import { AuthContext } from '../../../Contexts/AuthProvider';
+import toast from 'react-hot-toast';
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+
+    const handleLogout = () =>{
+        logOut()
+        .then( result => {
+            toast.success('Logout successfully')
+        })
+        .catch( error => {
+            toast.error('error here:', error)
+        })
+    }
+
+
     return (
         <div className='bg-blue-300 fixed z-20 w-full top-0 left-0'>
             <div className="navbar w-11/12 p-5 mx-auto">
@@ -14,8 +30,8 @@ const Header = () => {
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             <li><Link to='/home'>Home</Link></li>
-                            <li><Link>Add services</Link></li>
-                            <li><Link>My reviews</Link></li>
+                            <li><Link to='/services'>Add services</Link></li>
+                            <li><Link to='reviews'>My reviews</Link></li>
                             <li><Link to='/q&a'>Q&A</Link></li>
                             <li><Link to='/blog'>Blog</Link></li>
 
@@ -27,8 +43,8 @@ const Header = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">
                         <li><Link to='/home'>Home</Link></li>
-                        <li><Link>Add services</Link></li>
-                        <li><Link>My reviews</Link></li>
+                        <li><Link to='/services'>Add services</Link></li>
+                        <li><Link to='reviews'>My reviews</Link></li>
                         <li><Link to='/q&a'>Q&A</Link></li>
                         <li><Link to='/blog'>Blog</Link></li>
 
@@ -37,8 +53,11 @@ const Header = () => {
                 </div>
                 <div className="navbar-end">
                     {/* <p className='mr-7'>Name: <FaUser className='inline-block'></FaUser></p> */}
-                    <Link to='/login' className="mr-7">Login <FaUser className='inline-block'></FaUser> </Link>
-                    <Link className="">Logout <FaArrowRight className='inline-block'></FaArrowRight> </Link>
+                    {user?.uid ?
+                        <button><Link to='/summary' onClick={handleLogout} className="">Logout <FaArrowRight className='inline-block'></FaArrowRight> </Link></button>
+                        :
+                        <Link to='/login' className="mr-7">Login <FaUser className='inline-block'></FaUser> </Link>
+                    }
                 </div>
             </div>
         </div>
