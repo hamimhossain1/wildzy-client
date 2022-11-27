@@ -1,13 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ServicesHome = ({ service }) => {
-    // const [services, setServices] = useState([])
-    // useEffect(() => {
-    //     fetch(`https://wildzy-server.vercel.app/services`) 
-    //     .then(res => res.json())
-    //     .then(data => setServices(data))
-    // },[])
-    // const {img, description, serviceName} = service;
+    
     console.log(service)
     return (
         <>
@@ -19,6 +14,8 @@ const ServicesHome = ({ service }) => {
                     <p> {service.description.slice(0, 100) + '...'}</p>
                     <p className='font-bold'>Price: ${service.price}</p>
                 </div>
+                <button className="btn btn-outline btn-warning"><Link to={`/services/${service._id}`}>VIEW DETAILS</Link></button>
+                
             </div>            
         </>
     );

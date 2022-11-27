@@ -3,9 +3,11 @@ import Main from "../Layout/Main";
 import Blog from "../Pages/Blog/Blog";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Home from "../Pages/Home/Home/Home";
+import ServicesHomeDetails from "../Pages/Home/ServicesHome/ServicesHomeDetails";
 import Login from "../Pages/Login/Login";
 import QandA from "../Pages/Q&A/QandA";
 import Reviews from "../Pages/Reviews/Reviews";
+import ServiceDetails from "../Pages/Services/ServiceDetails";
 import Services from "../Pages/Services/Services";
 
 
@@ -25,12 +27,17 @@ const router = createBrowserRouter([
             {
                 path:'/',
                 element: <Home></Home>,
-                loader: () => fetch(`https://wildzy-server.vercel.app/services`)
+                loader: () => fetch(`http://localhost:5000/services`)
             },
             {
                 path:'/home',
                 element: <Home></Home>,
-                loader: () => fetch(`https://wildzy-server.vercel.app/services`)
+                loader: () => fetch(`http://localhost:5000/services`)
+            },
+            {
+                path: '/services/:id',
+                element: <ServicesHomeDetails></ServicesHomeDetails>,
+                params: ({params}) => fetch(`http://localhost:5000/services${params.id}`)               
             },
             {
                 path:'/blog',
@@ -53,8 +60,14 @@ const router = createBrowserRouter([
                 element: <Summary></Summary>
             },
             {
-                path:'/services',
-                element: <PrivetRoutes><Services></Services></PrivetRoutes>
+                path:'/allServices',
+                element: <PrivetRoutes><Services></Services></PrivetRoutes>,
+                loader: () => fetch(`http://localhost:5000/allServices`)
+            },
+            {
+                path: '/allServices/:id',
+                element: <ServiceDetails></ServiceDetails>,
+                loader: ({params}) => fetch(`http://localhost:5000/allServices${params.id}`)
             },
             {
                 path:'/reviews',
