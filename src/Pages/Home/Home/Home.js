@@ -8,6 +8,7 @@ import ServicesHome from '../ServicesHome/ServicesHome';
 
 
 
+
 const Home = () => {
     const services = useLoaderData()
     console.log(services)
