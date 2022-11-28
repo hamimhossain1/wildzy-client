@@ -17,7 +17,7 @@ const CarouselItem = ({ slide }) => {
             </div>
             <div className="absolute flex justify-start transform -translate-y-1/2 w-2/5 left-14 md:left-24  top-3/4">
                 <button className="btn btn-warning mr-5"><Link to='/signup'>Get Started</Link></button>
-                <button className="btn btn-outline btn-warning"><Link to='/login'>Login Now</Link></button>
+                <button className="btn btn-outline btn-warning"><Link to="/login">Login Now</Link></button>
             </div>
 
             <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
