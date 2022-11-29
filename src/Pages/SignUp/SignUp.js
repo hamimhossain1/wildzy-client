@@ -17,6 +17,7 @@ const SignUp = () => {
         const form = event.target;
         const name = form.name.value;
         const email = form.email.value;
+        const photoURL = form.photoURL.value;
         const password = form.password.value;
         // form.reset()
         createUser(email, password)
@@ -26,7 +27,7 @@ const SignUp = () => {
                 toast.success('Sign up successful...!')
                 navigate( from, {replace: true});
                 //---- update user profile ----//
-                userProfile(name)
+                userProfile(name, photoURL)
                     .then(() => {
                         toast.success('User name updated')
                     })
@@ -66,6 +67,11 @@ const SignUp = () => {
                     <div class="mb-6">
                         <label for="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
                         <input type="email" id="email" name="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@example.com" required="" />
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Photo URL</label>
+                        <input type="text" id="photoURL" name="photoURL" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your photo URL" required="" />
                     </div>
 
                     <div class="mb-6">

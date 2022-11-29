@@ -27,9 +27,9 @@ const signIn = (email, password) =>{
 
 
 //---update user name---//
-const userProfile = (name) =>{
+const userProfile = (name, photoURL) =>{
     setLoading(true)
-    return updateProfile(auth.currentUser, { displayName: name})
+    return updateProfile(auth.currentUser, { displayName: name, photoURL: photoURL})
 }
 
 //---sign in with google---//
