@@ -17,7 +17,7 @@ const AllServices = ({ service }) => {
                 </PhotoProvider>
                 <div className="card-body">
                     <h2 className="card-title font-bold">{serviceName}</h2>
-                    <p> {description.slice(0, 100) + '...'}</p>
+                    <p> {description?.slice(0, 100) + '...'}</p>
                     <p className='font-bold'>Price: ${price}</p>
                     <Link to={`/allServices/${_id}`}>
                         <button className="btn btn-warning">VIEW DETAILS</button>
