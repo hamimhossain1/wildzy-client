@@ -61,13 +61,13 @@ const router = createBrowserRouter([
             },
             {
                 path:'/allServices',
-                element: <PrivetRoutes><Services></Services></PrivetRoutes>,
+                element: <Services></Services>,
                 loader: () => fetch(`http://localhost:5000/allServices`)
             },
             {
                 path: '/allServices/:id',
                 element: <ServiceDetails></ServiceDetails>,
-                loader: ({params}) => fetch(`http://localhost:5000/allServices/${params.id}`)
+                loader: ({params}) => fetch(`http://localhost:5000/allServices/${params.id}`),
             },
             {
                 path: '/addService',
@@ -75,7 +75,8 @@ const router = createBrowserRouter([
             },
             {
                 path:'/reviews',
-                element: <PrivetRoutes><Reviews></Reviews></PrivetRoutes>
+                // element: <PrivetRoutes><Reviews></Reviews></PrivetRoutes>
+                element: <Reviews></Reviews>
             },
         ]
     },

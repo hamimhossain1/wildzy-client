@@ -1,13 +1,18 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider';
+import SingleReview from './SingleReview';
 
 const ServiceDetails = () => {
+    const [userReview, setUserReview] = useState(null);
+    console.log(userReview)
+
     const services = useLoaderData();
     const { img, price, serviceName, description, _id } = services;
     // console.log(services);
     const { user } = useContext(AuthContext)
+    const navigate = useNavigate()
 
     const handleUserReview = event => {
         event.preventDefault();
@@ -47,6 +52,12 @@ const ServiceDetails = () => {
             .catch(er => console.error(er));
     }
 
+    useEffect(() => {
+        fetch(`http://localhost:5000/userReview/${_id}`)
+            .then(res => res.json())
+            .then(data => setUserReview(data))
+    }, [_id])
+
     return (
         <>
             <h3 className='mt-32 mb-10 text-center text-3xl font-bold'>Products details and Review section</h3>
@@ -66,32 +77,37 @@ const ServiceDetails = () => {
                     </div>
                 </div>
 
-                <form onSubmit={handleUserReview} className='w-8/12'>
-                    {/* <div class="mb-6">
-                        <label for="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Full Name</label>
-                        <input type="text" id="name" name="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Full name" required="" />
+                <div>
+                    {user?.uid ?
+                        <form onSubmit={handleUserReview} className='w-8/12 mx-auto'>
+                            <div class="mb-6">
+                                <label for="review" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Review</label>
+
+                                <textarea type="text" id="review" name="review" className="textarea textarea-bordered w-full" placeholder="Your review here..."></textarea>
+                            </div>
+                            <button className="btn btn-warning w-full">Submit</button>
+                        </form>
+                        :
+                        <div>
+                            <p className='text-center mb-4 '>Please login to add a review</p>
+                            <Link to='/login'>
+                            <button className="btn btn-warning w-full">Login</button>
+                        </Link>
+                        </div>
+                    }
+                    <h1 className='mt-16 mb-0 font-bold text-center'>Users Reviews on this Service</h1>
+                    <div className="divider"></div>
+
+                    <div >
+                        {
+                            userReview?.map(singleReview => <SingleReview
+                                key={singleReview._id}
+                                singleReview={singleReview}
+                            ></SingleReview>)
+                        }
+
                     </div>
-
-                    <div class="mb-6">
-                        <label for="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
-                        <input type="email" id="email" name="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@example.com" required="" />
-                    </div>
-
-                <div class="mb-6">
-                        <label for="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Photo URL</label>
-                        <input type="text" id="email" name="photoURL" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter PhotoURL" required="" />
-                    </div> */}
-
-                    <div class="mb-6">
-                        <label for="review" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Review</label>
-
-                        <textarea type="text" id="review" name="review" className="textarea textarea-bordered w-full" placeholder="Your review here..."></textarea>
-                    </div>
-
-                     <button className="btn btn-warning w-full">Submit</button>
-                    
-                    <div className="divider">OR</div>
-                </form>
+                </div>
 
             </div>
         </>
