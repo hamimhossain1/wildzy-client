@@ -7,7 +7,7 @@ const SingleReview = ({ singleReview }) => {
             <div className=" bg-base-200 shadow-xl flex p-3 rounded-lg">
                 <div className="avatar mr-5">
                     <div className="w-24 rounded-full ring ring- ring-offset-base-100 ring-offset-2">
-                        <img src={photoURL} />
+                        <img src={photoURL} alt=""/>
                     </div>
                 </div>                
                 <div className="">

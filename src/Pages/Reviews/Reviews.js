@@ -1,8 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Contexts/AuthProvider';
+import MineSingleReview from './MineSingleReview';
 
 const Reviews = () => {
-    const [myReview, setMyReview] = useState({});
+    const [myReview, setMyReview] = useState([]);
 
     const {user} = useContext(AuthContext);
 
@@ -14,7 +15,15 @@ const Reviews = () => {
     console.log(myReview)
     return (
         <div className='mt-36'>
-            <h1 className='text-2xl font-bold text-center'>This is my Review Section</h1>
+            <h1 className='text-2xl font-bold text-center text-blue-300'>This is my Review Section</h1>
+            <div className="divider w-11/12 md:w-11/12 lg:w-7/12 mx-auto"></div>
+
+            {
+                myReview?.map(singleReview => <MineSingleReview
+                key={singleReview._id}
+                singleReview={singleReview}
+                ></MineSingleReview>)
+            }
         </div>
     );
 };
