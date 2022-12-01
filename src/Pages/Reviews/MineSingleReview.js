@@ -1,10 +1,12 @@
 import React from 'react';
-import { FaEdit } from 'react-icons/fa';
 import { AiOutlineDelete } from 'react-icons/ai';
 import { CiEdit } from 'react-icons/ci';
 
-const MineSingleReview = ({ singleReview }) => {
-    const { serviceName, name, img, photoURL, review } = singleReview;
+const MineSingleReview = ({ singleReview, handleDelete }) => {
+    const { serviceName, name, img, photoURL, review, serviceId, _id } = singleReview;
+
+    
+
     return (
         <div className='mb-10'>
             <div className='relative  top-0 left-0    w-11/12 md:w-11/12 lg:w-6/12  mb-5  mx-auto mt-8 '>
@@ -22,9 +24,10 @@ const MineSingleReview = ({ singleReview }) => {
                     </div>
                     <div className='absolute top-0 right-0 h-16 w-16 mt-2 '>
                         <div className='flex justify-around p-1 '>
-                            <CiEdit className='text-2xl text-base-400 hover:bg-sky-200 mr-2'></CiEdit>
-                            <AiOutlineDelete className='text-2xl text-red-600 hover:bg-sky-200'></AiOutlineDelete>
-
+                            <button ><CiEdit className='text-2xl text-base-400 hover:bg-sky-200 mr-2'></CiEdit></button>
+                            <button onClick={()=> handleDelete(_id)}><AiOutlineDelete className='text-2xl text-red-600 hover:bg-sky-200'></AiOutlineDelete></button>
+                            
+                            
                         </div>
                     </div>
                 </div>
