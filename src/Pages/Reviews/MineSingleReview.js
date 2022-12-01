@@ -5,7 +5,7 @@ import { CiEdit } from 'react-icons/ci';
 const MineSingleReview = ({ singleReview, handleDelete }) => {
     const { serviceName, name, img, photoURL, review, serviceId, _id } = singleReview;
 
-    
+
 
     return (
         <div className='mb-10'>
@@ -25,9 +25,7 @@ const MineSingleReview = ({ singleReview, handleDelete }) => {
                     <div className='absolute top-0 right-0 h-16 w-16 mt-2 '>
                         <div className='flex justify-around p-1 '>
                             <button ><CiEdit className='text-2xl text-base-400 hover:bg-sky-200 mr-2'></CiEdit></button>
-                            <button onClick={()=> handleDelete(_id)}><AiOutlineDelete className='text-2xl text-red-600 hover:bg-sky-200'></AiOutlineDelete></button>
-                            
-                            
+                            <button onClick={() => handleDelete(_id)}><AiOutlineDelete className='text-2xl text-red-600 hover:bg-sky-200'></AiOutlineDelete></button>
                         </div>
                     </div>
                 </div>
