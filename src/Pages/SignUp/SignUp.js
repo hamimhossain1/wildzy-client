@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Helmet } from 'react-helmet';
 import toast from 'react-hot-toast';
 import { FaFacebook, FaGithub, FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -55,6 +56,12 @@ const SignUp = () => {
 
     return (
         <div className='mt-36 mb-12'>
+
+            {/* react helmet for dynamic title  */}
+            <Helmet>
+                <title>Wildzy/signUp</title>
+            </Helmet>
+
             <div className="card w-10/12 lg:w-5/12 bg-green-200 shadow-xl p-5 mx-auto">
                 <h3 className='text-3xl font-bold text-center mb-4'>SignUp</h3>
 

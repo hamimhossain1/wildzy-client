@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import toast from 'react-hot-toast';
 
 const AddService = () => {
@@ -40,6 +41,13 @@ const AddService = () => {
 
     return (
         <div className='mt-40 mb-20'>
+
+            {/* react helmet for dynamic title  */}
+            <Helmet>
+                <title>Wildzy/addService</title>
+            </Helmet>
+
+
             <h3 className='text-blue-300 text-2xl font-bold text-center mb-4'>Add Service You Like</h3>
             <div className="card w-10/12 lg:w-5/12 bg-blue-100 shadow-xl p-5 mx-auto">
                 <form onSubmit={handleSubmit} className='w-8/12 mx-auto my-10'>

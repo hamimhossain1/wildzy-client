@@ -1,10 +1,17 @@
 import React, { useContext } from 'react';
+import { Helmet } from 'react-helmet';
 import { AuthContext } from '../../Contexts/AuthProvider';
 
 const Blog = () => {
 
     return (
         <div className='lg:w-9/12 w-10/12 mx-auto mt-32'>
+
+            {/* react helmet for dynamic title  */}
+            <Helmet>
+                <title>Wildzy/blog</title>
+            </Helmet>
+
             <p className='mt-5 text-center text-2xl md:text-3xl font-bold text-blue-300'>Blog Section</p>
             <div className="card mt-10 mb-10 lg:w-7/12  mx-auto  bg-base-300 shadow-xl">
                 <div className="card-body">

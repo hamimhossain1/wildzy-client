@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { AiOutlineDelete } from 'react-icons/ai';
 import { CiEdit } from 'react-icons/ci';
 
@@ -10,6 +11,12 @@ const MineSingleReview = ({ singleReview, handleDelete, setEditReview }) => {
 
     return (
         <div className='mb-10'>
+
+            {/* react helmet for dynamic title  */}
+            <Helmet>
+                <title>Wildzy/myReviews</title>
+            </Helmet>
+
             <div className='relative  top-0 left-0    w-11/12 md:w-11/12 lg:w-6/12  mb-5  mx-auto mt-8 '>
                 <div className=" bg-base-200 shadow-xl flex p-3 rounded-lg">
                     <div className="avatar mr-5 flex flex-col">

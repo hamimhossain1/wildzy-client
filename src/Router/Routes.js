@@ -14,8 +14,8 @@ import Services from "../Pages/Services/Services";
 
 import SignUp from "../Pages/SignUp/SignUp";
 import Summary from "../Pages/Summary/Summary";
-import PrivetRoutes from "./PrivetRoutes";
-
+// import PrivetRoutes from "./PrivetRoutes";
+import PrivetRoutes from "../Router/PrivetRoutes"
 
 
 
@@ -71,12 +71,12 @@ const router = createBrowserRouter([
             },
             {
                 path: '/addService',
-                element: <AddService></AddService>,
+                element: <PrivetRoutes><AddService></AddService></PrivetRoutes>,
             },
             {
                 path:'/reviews',
-                // element: <PrivetRoutes><Reviews></Reviews></PrivetRoutes>
-                element: <Reviews></Reviews>
+                element: <PrivetRoutes><Reviews></Reviews></PrivetRoutes>
+                // element: <Reviews></Reviews>
             },
         ]
     },

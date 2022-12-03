@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import toast from 'react-hot-toast';
 import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider';
@@ -60,6 +61,10 @@ const ServiceDetails = () => {
 
     return (
         <>
+            {/* react helmet for dynamic title  */}
+            <Helmet>
+                <title>Wildzy/serviceDetails&review</title>
+            </Helmet>
             <h3 className='mt-32 mb-10 text-center text-3xl font-bold'>Products details and Review section</h3>
             <div className=' w-9/12 mx-auto grid grid-cols-2 gap-10'>
 
@@ -91,8 +96,8 @@ const ServiceDetails = () => {
                         <div>
                             <p className='text-center mb-4 '>Please login to add a review</p>
                             <Link to='/login'>
-                            <button className="btn btn-warning w-full">Login</button>
-                        </Link>
+                                <button className="btn btn-warning w-full">Login</button>
+                            </Link>
                         </div>
                     }
                     <h1 className='mt-16 mb-0 font-bold text-center'>Users Reviews on this Service</h1>

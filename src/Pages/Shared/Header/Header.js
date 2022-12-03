@@ -9,14 +9,14 @@ const Header = () => {
     const { user, logOut } = useContext(AuthContext);
 
 
-    const handleLogout = () =>{
+    const handleLogout = () => {
         logOut()
-        .then( result => {
-            toast.success('Logout successfully')
-        })
-        .catch( error => {
-            toast.error('error here:', error)
-        })
+            .then(result => {
+                toast.success('Logout successfully')
+            })
+            .catch(error => {
+                toast.error('error here:', error)
+            })
     }
 
 
@@ -31,8 +31,14 @@ const Header = () => {
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             <li><Link to='/home'>Home</Link></li>
                             <li><Link to='/allServices'>Services</Link></li>
+
+                            {/* {user?.uid &&   } */}
+
                             <li><Link to='/addService'>Add Service</Link></li>
                             <li><Link to='reviews'>My reviews</Link></li>
+
+                          
+
                             <li><Link to='/q&a'>Q&A</Link></li>
                             <li><Link to='/blog'>Blog</Link></li>
 
@@ -45,8 +51,13 @@ const Header = () => {
                     <ul className="menu menu-horizontal p-0">
                         <li><Link to='/home'>Home</Link></li>
                         <li><Link to='/allServices'>Services</Link></li>
+
+                    {/* {user?.uid && } */}
+
                         <li><Link to='/addService'>Add Service</Link></li>
                         <li><Link to='reviews'>My reviews</Link></li>
+
+
                         <li><Link to='/q&a'>Q&A</Link></li>
                         <li><Link to='/blog'>Blog</Link></li>
 
@@ -54,7 +65,6 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    {/* <p className='mr-7'>Name: <FaUser className='inline-block'></FaUser></p> */}
                     {user?.uid ?
                         <button><Link to='/summary' onClick={handleLogout} className="">Logout <FaArrowRight className='inline-block'></FaArrowRight> </Link></button>
                         :

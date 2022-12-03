@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link, useLoaderData } from 'react-router-dom';
 import About from '../About/About';
 import Achievement from '../Achievement/Achievement';
@@ -14,6 +15,12 @@ const Home = () => {
     // console.log(services)
     return (
         <div>
+
+            {/* react helmet for dynamic title  */}
+            <Helmet>
+                <title>Wildzy/home</title>
+            </Helmet>
+
             <Banner></Banner>
             <About></About>
             <Achievement></Achievement>
