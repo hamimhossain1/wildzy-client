@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import toast from 'react-hot-toast';
 
 const EditReviewModal = ({editReview}) => {
     console.log(editReview)
-    const {email, review, _id} = editReview;
+    const {review, _id} = editReview;
 
     const [editedReview, setEditedReview] = useState("");
 
@@ -18,11 +19,9 @@ const EditReviewModal = ({editReview}) => {
         .then(res => res.json())
         .then(data => {
             console.log(data)
+            toast.success('Review edited successfully.')
             // if(data.modifiedCount > 0){
-            //     const remaining = myReview.filter(review => review._id !== id);
-            //     const approving = myReview.find(review => review._id === id);
-            //     const editReview = [...remaining, approving]
-            //     setMyReview(editReview)
+            
             // }
         })
     }
@@ -33,10 +32,7 @@ const EditReviewModal = ({editReview}) => {
             <div className="modal">
                 <div className="modal-box relative">
                     <label htmlFor="edit-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                    <h3 className="text-lg font-bold">Edit your review</h3>
-                    <h3 className="text-lg font-bold">{email}</h3>
-                    {/* <p className="py-4">{review}</p> */}
-                    
+                    <h3 className="text-lg font-bold mb-5 text-gray-500">Edit your review</h3>
                     <input onChange={(e) => setEditedReview(e.target.value)} type="text" placeholder={review} className="input input-bordered w-full max-w-xs" /> <br></br><br></br>
                     <button onClick={() => handleEdit()} className="btn btn-warning mx-auto block">SUBMIT</button>
                 </div>
