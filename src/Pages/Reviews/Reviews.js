@@ -13,7 +13,11 @@ const Reviews = () => {
 
     //---query a review by email---//
     useEffect( () => {
-        fetch(`http://localhost:5000/userReview?email=${user?.email}`)
+        fetch(`http://localhost:5000/userReview?email=${user?.email}`, {
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('genius-token')}`
+            }
+        })
         .then(res => res.json())
         .then(data => setMyReview(data))
     },[user?.email])
