@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import toast from 'react-hot-toast';
 
-const EditReviewModal = ({editReview}) => {
-    console.log(editReview)
+const EditReviewModal = ({editReview, isChange, setIsChange}) => {
+
+
     const {review, _id} = editReview;
 
     const [editedReview, setEditedReview] = useState("");
@@ -21,9 +22,9 @@ const EditReviewModal = ({editReview}) => {
         .then(data => {
             console.log(data)
             toast.success('Review edited successfully.')
-            // if(data.modifiedCount > 0){
-            
-            // }
+            if(data.modifiedCount){
+                setIsChange(!isChange)
+            }
         })
     }
 

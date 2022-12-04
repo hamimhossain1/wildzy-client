@@ -9,6 +9,8 @@ const ServiceDetails = () => {
     const [userReview, setUserReview] = useState(null);
     console.log(userReview)
 
+    const [isChange, setIsChange] = useState(true);
+
     const services = useLoaderData();
     const { img, price, serviceName, description, _id } = services;
     // console.log(services);
@@ -46,6 +48,7 @@ const ServiceDetails = () => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged) {
+                    setIsChange(!isChange)
                     toast.success('Your review add successfully...!')
                     form.reset();
                 }
@@ -57,7 +60,7 @@ const ServiceDetails = () => {
         fetch(`http://localhost:5000/userReview/${_id}`)
             .then(res => res.json())
             .then(data => setUserReview(data))
-    }, [_id])
+    }, [_id, isChange])
 
     return (
         <>

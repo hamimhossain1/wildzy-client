@@ -10,7 +10,7 @@ const MineSingleReview = ({ singleReview, handleDelete, setEditReview }) => {
 
 
     return (
-        <div className='mb-10'>
+        <div className='mb-10 '>
 
             {/* react helmet for dynamic title  */}
             <Helmet>
