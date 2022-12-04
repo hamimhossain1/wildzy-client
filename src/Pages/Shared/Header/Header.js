@@ -32,11 +32,14 @@ const Header = () => {
                             <li><Link to='/home'>Home</Link></li>
                             <li><Link to='/allServices'>Services</Link></li>
 
-                            {/* {user?.uid &&   } */}
+                            {user?.uid &&  
+                            
+                            <>
 
                             <li><Link to='/addService'>Add Service</Link></li>
                             <li><Link to='reviews'>My reviews</Link></li>
-
+                            </>
+                        }
                           
 
                             <li><Link to='/q&a'>Q&A</Link></li>
@@ -52,10 +55,13 @@ const Header = () => {
                         <li><Link to='/home'>Home</Link></li>
                         <li><Link to='/allServices'>Services</Link></li>
 
-                    {/* {user?.uid && } */}
-
+                    {user?.uid && 
+                    <>
                         <li><Link to='/addService'>Add Service</Link></li>
                         <li><Link to='reviews'>My reviews</Link></li>
+
+                    </>
+                    }
 
 
                         <li><Link to='/q&a'>Q&A</Link></li>

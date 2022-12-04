@@ -62,6 +62,7 @@ const logOut = () =>{
         loading,
         logOut,
         user,
+        setLoading
 
     }
     return (
