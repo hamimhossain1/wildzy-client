@@ -68,8 +68,8 @@ const ServiceDetails = () => {
                 <title>Wildzy/serviceDetails&review</title>
             </Helmet>
             <h3 className='mt-32 mb-10 text-center text-3xl font-bold'>Products details and Review section</h3>
-            <div className=' w-9/12 mx-auto grid grid-cols-2 gap-10'>
 
+            <div className=' w-11/12 lg:w-9/12 mx-auto grid grid-cols-1  lg:grid-cols-2 gap-10'>
 
                 <div className="card card-compact w-full  md:w-12/12 lg:w-12/12 bg-base-100 shadow-xl mb-10">
                     <figure><img className='w-full h-56' src={img
