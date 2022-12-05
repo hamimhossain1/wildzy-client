@@ -36,7 +36,7 @@ const ServiceDetails = () => {
         }
         console.log(userReview)
 
-        fetch(`http://localhost:5000/userReview`, {
+        fetch(`https://wildzy-server.vercel.app/userReview`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -56,7 +56,7 @@ const ServiceDetails = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/userReview/${_id}`)
+        fetch(`https://wildzy-server.vercel.app/userReview/${_id}`)
             .then(res => res.json())
             .then(data => setUserReview(data))
     }, [_id, isChange])

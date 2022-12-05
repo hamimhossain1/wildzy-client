@@ -21,7 +21,7 @@ const AddService = () => {
         }
         console.log(productDetails)
 
-        fetch(`http://localhost:5000/allServices`, {
+        fetch(`https://wildzy-server.vercel.app/allServices`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

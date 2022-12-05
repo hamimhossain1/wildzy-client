@@ -23,12 +23,12 @@ const router = createBrowserRouter([
             {
                 path:'/',
                 element: <Home></Home>,
-                loader: () => fetch(`http://localhost:5000/services`)
+                loader: () => fetch(`https://wildzy-server.vercel.app/services`)
             },
             {
                 path:'/home',
                 element: <Home></Home>,
-                loader: () => fetch(`http://localhost:5000/services`)
+                loader: () => fetch(`https://wildzy-server.vercel.app/services`)
             },
             {
                 path:'/blog',
@@ -53,12 +53,12 @@ const router = createBrowserRouter([
             {
                 path:'/allServices',
                 element: <Services></Services>,
-                loader: () => fetch(`http://localhost:5000/allServices`)
+                loader: () => fetch(`https://wildzy-server.vercel.app/allServices`)
             },
             {
                 path: '/allServices/:id',
                 element: <ServiceDetails></ServiceDetails>,
-                loader: ({params}) => fetch(`http://localhost:5000/allServices/${params.id}`),
+                loader: ({params}) => fetch(`https://wildzy-server.vercel.app/allServices/${params.id}`),
             },
             {
                 path: '/addService',

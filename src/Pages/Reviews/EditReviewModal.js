@@ -9,7 +9,7 @@ const EditReviewModal = ({editReview, isChange, setIsChange}) => {
 
     const handleEdit = () =>{
         console.log(editedReview)
-        fetch(`http://localhost:5000/userReview/${_id}`, {
+        fetch(`https://wildzy-server.vercel.app/userReview/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

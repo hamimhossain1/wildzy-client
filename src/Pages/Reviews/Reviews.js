@@ -15,7 +15,7 @@ const Reviews = () => {
 
     //---query a review by email---//
     useEffect(() => {
-        fetch(`http://localhost:5000/userReview?email=${user?.email}`, {
+        fetch(`https://wildzy-server.vercel.app/userReview?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('genius-token')}`
             }
@@ -37,7 +37,7 @@ const Reviews = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Do you agree to delete?');
         if (proceed) {
-            fetch(`http://localhost:5000/userReview/${id}`, {
+            fetch(`https://wildzy-server.vercel.app/userReview/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
