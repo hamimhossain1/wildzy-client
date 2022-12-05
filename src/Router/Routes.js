@@ -9,12 +9,8 @@ import QandA from "../Pages/Q&A/QandA";
 import Reviews from "../Pages/Reviews/Reviews";
 import ServiceDetails from "../Pages/Services/ServiceDetails";
 import Services from "../Pages/Services/Services";
-
-
-
 import SignUp from "../Pages/SignUp/SignUp";
 import Summary from "../Pages/Summary/Summary";
-// import PrivetRoutes from "./PrivetRoutes";
 import PrivetRoutes from "../Router/PrivetRoutes"
 
 
@@ -34,11 +30,6 @@ const router = createBrowserRouter([
                 element: <Home></Home>,
                 loader: () => fetch(`http://localhost:5000/services`)
             },
-            // {
-            //     path: '/services/:id',
-            //     element: <ServicesHomeDetails></ServicesHomeDetails>,
-            //     params: ({params}) => fetch(`http://localhost:5000/services${params.id}`)               
-            // },
             {
                 path:'/blog',
                 element: <Blog></Blog>
@@ -76,7 +67,6 @@ const router = createBrowserRouter([
             {
                 path:'/reviews',
                 element: <PrivetRoutes><Reviews></Reviews></PrivetRoutes>
-                // element: <Reviews></Reviews>
             },
         ]
     },

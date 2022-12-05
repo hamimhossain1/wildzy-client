@@ -15,7 +15,6 @@ const ServiceDetails = () => {
     const { img, price, serviceName, description, _id } = services;
     // console.log(services);
     const { user } = useContext(AuthContext)
-    const navigate = useNavigate()
 
     const handleUserReview = event => {
         event.preventDefault();

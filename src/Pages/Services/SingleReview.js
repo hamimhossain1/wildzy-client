@@ -1,7 +1,7 @@
 import React from 'react';
 
 const SingleReview = ({ singleReview }) => {
-    const { img, serviceName, review, name, photoURL } = singleReview;
+    const {  review, name, photoURL } = singleReview;
     return (
         <div className='mb-5'>
             <div className=" bg-base-200 shadow-xl flex p-3 rounded-lg">

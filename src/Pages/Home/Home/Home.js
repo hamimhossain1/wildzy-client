@@ -7,9 +7,6 @@ import Activities from '../Activities/Activities';
 import Banner from '../Banner/Banner';
 import ServicesHome from '../ServicesHome/ServicesHome';
 
-
-
-
 const Home = () => {
     const services = useLoaderData()
     // console.log(services)

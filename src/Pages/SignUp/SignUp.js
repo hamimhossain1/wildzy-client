@@ -11,8 +11,6 @@ const SignUp = () => {
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
 
-
-
     const handleSubmit = (event) => {
         event.preventDefault()
         const form = event.target;
@@ -52,7 +50,6 @@ const SignUp = () => {
             toast.error('error',error.massage);
         })
     }
-
 
     return (
         <div className='mt-36 mb-12'>

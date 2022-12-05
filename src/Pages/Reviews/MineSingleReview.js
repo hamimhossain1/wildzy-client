@@ -8,7 +8,6 @@ const MineSingleReview = ({ singleReview, handleDelete, setEditReview }) => {
     console.log(review)
 
 
-
     return (
         <div className='mb-10 '>
 

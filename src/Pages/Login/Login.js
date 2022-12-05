@@ -24,8 +24,6 @@ const Login = () => {
             const user = result.user;
             // console.log(user)
 
-
-
             const currentUser = {
                 email: user.email
             }

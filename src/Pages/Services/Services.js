@@ -1,7 +1,6 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useLoaderData } from 'react-router-dom';
-import { AuthContext } from '../../Contexts/AuthProvider';
 import AllServices from './AllServices';
 
 const Services = () => {

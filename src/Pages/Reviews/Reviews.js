@@ -52,8 +52,6 @@ const Reviews = () => {
         }
     }
 
-
-
     return (
         <div className='mt-36'>
             <h1 className='text-2xl font-bold text-center text-blue-300'>This is my Review Section</h1>
